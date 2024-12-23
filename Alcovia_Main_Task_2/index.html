@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Learning Path</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #555;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .recommendation {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Personalized Learning Path</h1>
+        <div class="section">
+            <h2>Student Name</h2>
+            <p id="student-name"></p>
+        </div>
+        <div class="section">
+            <h2>Recommended Workshops</h2>
+            <ul id="workshops"></ul>
+        </div>
+        <div class="section">
+            <h2>Daily Task</h2>
+            <p id="daily-task"></p>
+        </div>
+        <div class="section">
+            <h2>Matched Mentor</h2>
+            <p id="mentor"></p>
+        </div>
+    </div>
+
+    <script>
+        // Example recommendations
+        const recommendations = {
+            studentName: "John Doe",
+            workshops: ["Robotics Workshop", "AI Bootcamp"],
+            dailyTask: "Complete a quiz on AI basics",
+            mentor: "Dr. A (AI Specialist)"
+        };
+
+        // Populate the HTML with the recommendations
+        document.getElementById("student-name").textContent = recommendations.studentName;
+        const workshopsList = document.getElementById("workshops");
+        recommendations.workshops.forEach(workshop => {
+            const li = document.createElement("li");
+            li.textContent = workshop;
+            workshopsList.appendChild(li);
+        });
+        document.getElementById("daily-task").textContent = recommendations.dailyTask;
+        document.getElementById("mentor").textContent = recommendations.mentor;
+    </script>
+</body>
+</html>

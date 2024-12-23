@@ -1,0 +1,12 @@
+{
+    "title": "Personalized Learning Path",
+    "student_name": "John Doe",
+    "recommendations": {
+        "workshops": [
+            "Robotics Workshop",
+            "AI Bootcamp"
+        ],
+        "daily_task": "Complete a quiz on AI basics",
+        "mentor": "Dr. A (AI Specialist)"
+    }
+}
